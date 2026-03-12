@@ -6,6 +6,11 @@ This project demonstrates modern frontend development practices, including compo
 
 ---
 
+
+## 🚀 Live Demo  
+👉 **https://insurance-policy-dashboard.vercel.app**
+
+
 ## 🚀 Features
 
 - **Policy Overview Panel** — view policy type, status, renewal date, premium amount  
