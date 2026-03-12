@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "policyName": "Health Protect",
+    "type": "Health",
+    "premium": 4500,
+    "renewalDate": "2026-06-15",
+    "coverage": "₹5,00,000",
+    "status": "Active"
+  },
+  {
+    "id": 2,
+    "policyName": "Term Secure",
+    "type": "Term",
+    "premium": 1200,
+    "renewalDate": "2026-05-01",
+    "coverage": "₹1,00,00,000",
+    "status": "Active"
+  },
+  {
+    "id": 3,
+    "policyName": "Motor Shield",
+    "type": "Motor",
+    "premium": 2200,
+    "renewalDate": "2026-04-25",
+    "coverage": "Comprehensive",
+    "status": "Active"
+  },
+  {
+    "id": 4,
+    "policyName": "Health Plus",
+    "type": "Health",
+    "premium": 5200,
+    "renewalDate": "2026-08-10",
+    "coverage": "₹10,00,000",
+    "status": "Grace"
+  },
+  {
+    "id": 5,
+    "policyName": "Term Elite",
+    "type": "Term",
+    "premium": 1500,
+    "renewalDate": "2026-09-30",
+    "coverage": "₹2,00,00,000",
+    "status": "Active"
+  },
+  {
+    "id": 6,
+    "policyName": "Motor Protect",
+    "type": "Motor",
+    "premium": 2000,
+    "renewalDate": "2026-04-05",
+    "coverage": "Third-Party",
+    "status": "Active"
+  }
+]

@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utilities */
+.badge { @apply inline-flex items-center rounded bg-blue-50 text-blue-700 text-xs px-2 py-0.5; }
