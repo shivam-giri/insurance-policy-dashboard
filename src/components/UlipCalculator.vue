@@ -2,7 +2,7 @@
   <section class="surface-card overflow-hidden p-5 sm:p-6">
     <div class="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
       <div>
-        <div class="flex items-start justify-between gap-4">
+        <div class="flex flex-col items-start justify-between gap-4 sm:flex-row">
           <div>
             <h3 class="panel-title">ULIP calculator</h3>
             <p class="panel-copy mt-1">
@@ -42,23 +42,23 @@
         </div>
       </div>
 
-      <div class="rounded-[28px] bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-900 p-6 text-white shadow-[0_24px_70px_-30px_rgba(15,23,42,0.8)]">
+      <div class="rounded-[28px] bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-900 p-5 text-white shadow-[0_24px_70px_-30px_rgba(15,23,42,0.8)] sm:p-6">
         <p class="text-xs uppercase tracking-[0.24em] text-emerald-200">Estimated maturity value</p>
-        <p class="mt-3 text-4xl font-semibold">{{ formatCurrency(result.fundValue) }}</p>
+        <p class="mt-3 break-words text-3xl font-semibold sm:text-4xl">{{ formatCurrency(result.fundValue) }}</p>
         <p class="mt-3 max-w-md text-sm leading-6 text-slate-300">
           This gives you a directional view of possible ULIP outcomes so you can compare scenarios before making a long-term investment decision.
         </p>
 
         <dl class="mt-8 space-y-4">
-          <div class="flex items-center justify-between rounded-2xl bg-white/10 px-4 py-4 backdrop-blur">
+          <div class="flex flex-col gap-2 rounded-2xl bg-white/10 px-4 py-4 backdrop-blur sm:flex-row sm:items-center sm:justify-between">
             <dt class="text-sm text-slate-300">Total premium paid</dt>
             <dd class="text-lg font-semibold">{{ formatCurrency(result.totalInvested) }}</dd>
           </div>
-          <div class="flex items-center justify-between rounded-2xl bg-white/10 px-4 py-4 backdrop-blur">
+          <div class="flex flex-col gap-2 rounded-2xl bg-white/10 px-4 py-4 backdrop-blur sm:flex-row sm:items-center sm:justify-between">
             <dt class="text-sm text-slate-300">Estimated wealth gain</dt>
             <dd class="text-lg font-semibold">{{ formatCurrency(result.wealthGain) }}</dd>
           </div>
-          <div class="flex items-center justify-between rounded-2xl bg-white/10 px-4 py-4 backdrop-blur">
+          <div class="flex flex-col gap-2 rounded-2xl bg-white/10 px-4 py-4 backdrop-blur sm:flex-row sm:items-center sm:justify-between">
             <dt class="text-sm text-slate-300">Net yearly invested</dt>
             <dd class="text-lg font-semibold">{{ formatCurrency(result.netAnnualPremium) }}</dd>
           </div>

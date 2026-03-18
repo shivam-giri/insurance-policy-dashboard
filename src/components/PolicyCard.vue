@@ -12,7 +12,7 @@
       <p class="text-xs uppercase tracking-[0.24em] text-slate-300">Annual premium</p>
       <p class="mt-2 text-3xl font-semibold">{{ formatCurrency(policy.premium) }}</p>
     </div>
-    <dl class="mt-5 grid grid-cols-2 gap-4 text-sm">
+    <dl class="mt-5 grid grid-cols-1 gap-4 text-sm sm:grid-cols-2">
       <div class="rounded-2xl bg-slate-50 px-4 py-3">
         <dt class="text-xs uppercase tracking-[0.18em] text-slate-400">Coverage</dt>
         <dd class="mt-2 font-semibold text-slate-800">{{ policy.coverage }}</dd>

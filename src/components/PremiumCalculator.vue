@@ -1,6 +1,6 @@
 <template>
   <section class="surface-card overflow-hidden p-5 sm:p-6">
-    <div class="flex items-start justify-between gap-4">
+    <div class="flex flex-col items-start justify-between gap-4 sm:flex-row">
       <div>
         <h3 class="panel-title">Premium calculator</h3>
         <p class="panel-copy mt-1">Estimate a yearly premium with a fast what-if scenario before comparing plans.</p>

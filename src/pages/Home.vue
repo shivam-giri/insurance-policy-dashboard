@@ -1,16 +1,16 @@
 <template>
   <div class="space-y-8">
-    <section class="surface-card overflow-hidden px-6 py-8 sm:px-8 lg:px-10">
+    <section class="surface-card overflow-hidden px-5 py-7 sm:px-8 lg:px-10">
       <div class="grid gap-8 lg:grid-cols-[1.5fr_0.9fr] lg:items-end">
         <div class="space-y-5">
           <div class="inline-flex rounded-full border border-sky-200 bg-sky-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-sky-700">
             Smart Coverage Overview
           </div>
           <div class="max-w-3xl space-y-4">
-            <h1 class="text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
+            <h1 class="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
               Keep every policy in one calm, high-visibility command center.
             </h1>
-            <p class="max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
+            <p class="max-w-2xl text-sm leading-7 text-slate-600 sm:text-base lg:text-lg">
               Review active plans, compare premiums, and catch renewal deadlines before they turn into last-minute work.
             </p>
           </div>
@@ -58,7 +58,9 @@ const policies = computed(() => store.filtered.length ? store.filtered : store.p
 const nextRenewalLabel = computed(() => {
   if (!store.policies.length) return 'Loading'
   const next = [...store.policies].sort((a, b) => new Date(a.renewalDate) - new Date(b.renewalDate))[0]
-  return next ? next.renewalDate : 'No policies'
+  return next
+    ? new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).format(new Date(next.renewalDate))
+    : 'No policies'
 })
 
 onMounted(() => {

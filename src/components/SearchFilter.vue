@@ -5,7 +5,7 @@
         <h3 class="panel-title">Search and filter</h3>
         <p class="panel-copy mt-1">Narrow the list by policy name or coverage type without leaving the dashboard.</p>
       </div>
-      <button class="secondary-button" @click="clear">Reset filters</button>
+      <button class="secondary-button w-full sm:w-auto" @click="clear">Reset filters</button>
     </div>
     <div class="mt-5 grid gap-4 md:grid-cols-[1.5fr_1fr]">
       <label>

@@ -22,8 +22,8 @@
       </label>
     </div>
 
-    <div v-if="a && b" class="mt-6 overflow-hidden rounded-[28px] border border-slate-100 bg-slate-50">
-      <table class="min-w-full text-sm">
+    <div v-if="a && b" class="mt-6 overflow-x-auto rounded-[28px] border border-slate-100 bg-slate-50">
+      <table class="min-w-[640px] text-sm sm:min-w-full">
         <thead class="bg-slate-950 text-left text-white">
           <tr>
             <th class="px-5 py-4 font-medium uppercase tracking-[0.18em] text-slate-300">Field</th>
