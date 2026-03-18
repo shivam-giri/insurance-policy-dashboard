@@ -1,15 +1,26 @@
 <template>
-  <div class="border rounded-lg bg-white p-4">
-    <h3 class="font-semibold">Search & Filter</h3>
-    <div class="mt-2 grid sm:grid-cols-3 gap-3 text-sm">
-      <input v-model="q" placeholder="Search by name/type..." class="border rounded px-2 py-1"/>
-      <select v-model="type" class="border rounded px-2 py-1">
-        <option value="">All Types</option>
-        <option>Health</option>
-        <option>Term</option>
-        <option>Motor</option>
-      </select>
-      <button class="bg-gray-100 rounded px-3" @click="clear">Clear</button>
+  <div class="surface-card p-5 sm:p-6">
+    <div class="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+      <div>
+        <h3 class="panel-title">Search and filter</h3>
+        <p class="panel-copy mt-1">Narrow the list by policy name or coverage type without leaving the dashboard.</p>
+      </div>
+      <button class="secondary-button" @click="clear">Reset filters</button>
+    </div>
+    <div class="mt-5 grid gap-4 md:grid-cols-[1.5fr_1fr]">
+      <label>
+        <span class="field-label">Keyword</span>
+        <input v-model="q" placeholder="Search by policy name or type" class="input-shell" />
+      </label>
+      <label>
+        <span class="field-label">Policy Type</span>
+        <select v-model="type" class="input-shell">
+          <option value="">All Types</option>
+          <option>Health</option>
+          <option>Term</option>
+          <option>Motor</option>
+        </select>
+      </label>
     </div>
   </div>
 </template>
