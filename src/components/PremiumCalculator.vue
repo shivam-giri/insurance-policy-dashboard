@@ -26,7 +26,7 @@
       <button class="primary-button sm:col-span-3" type="submit">Calculate premium</button>
     </form>
 
-    <div class="mt-6 rounded-[24px] bg-gradient-to-br from-slate-950 via-slate-900 to-sky-900 px-5 py-5 text-white">
+    <div class="mt-6 rounded-[24px] border border-slate-800/80 bg-gradient-to-br from-slate-950 via-slate-900 to-sky-900 px-5 py-5 text-white">
       <p class="text-xs uppercase tracking-[0.24em] text-slate-300">Estimated annual premium</p>
       <p class="mt-3 text-3xl font-semibold">{{ result ? formatCurrency(result) : 'Run the estimate' }}</p>
     </div>

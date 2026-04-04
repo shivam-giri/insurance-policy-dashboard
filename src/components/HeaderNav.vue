@@ -1,9 +1,9 @@
 <template>
   <header class="sticky top-0 z-20 px-4 pt-4 sm:px-6 lg:px-8">
-    <nav class="mx-auto w-full max-w-7xl rounded-[28px] border border-white/70 bg-white/80 px-4 py-4 shadow-[0_18px_50px_-30px_rgba(15,23,42,0.55)] backdrop-blur sm:px-5">
+    <nav class="mx-auto w-full max-w-7xl rounded-[28px] border border-slate-200/80 bg-white/90 px-4 py-4 shadow-[0_10px_30px_-24px_rgba(15,23,42,0.2)] backdrop-blur sm:px-5">
       <div class="flex items-center justify-between gap-3">
         <div class="min-w-0 flex items-center gap-3">
-          <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-500 via-cyan-400 to-amber-300 shadow-lg shadow-sky-200/70">
+          <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/60 bg-gradient-to-br from-sky-500 via-cyan-400 to-amber-300 shadow-[0_8px_18px_-16px_rgba(14,165,233,0.7)]">
             <img src="../assets/logo-insurance.png" class="h-6 w-6" alt="Insurance dashboard logo" />
           </div>
           <div class="min-w-0">
@@ -28,7 +28,7 @@
 
         <ul class="hidden items-center gap-2 text-sm font-medium text-slate-600 md:flex">
           <li v-for="item in navItems" :key="item.to">
-            <RouterLink :to="item.to" class="rounded-full px-4 py-2 transition hover:bg-slate-100 hover:text-slate-900" active-class="bg-slate-900 text-white shadow-lg shadow-slate-300">
+            <RouterLink :to="item.to" class="rounded-full border border-transparent px-4 py-2 transition hover:bg-slate-100 hover:text-slate-900" active-class="border border-slate-200 bg-slate-900 text-white">
               {{ item.label }}
             </RouterLink>
           </li>
@@ -40,8 +40,8 @@
           <li v-for="item in navItems" :key="`${item.to}-mobile`">
             <RouterLink
               :to="item.to"
-              class="block rounded-2xl px-4 py-3 transition hover:bg-slate-100"
-              active-class="bg-slate-900 text-white shadow-lg shadow-slate-300"
+              class="block rounded-2xl border border-transparent px-4 py-3 transition hover:bg-slate-100"
+              active-class="border border-slate-200 bg-slate-900 text-white"
               @click="menuOpen = false"
             >
               {{ item.label }}

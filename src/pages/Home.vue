@@ -16,15 +16,15 @@
           </div>
         </div>
         <div class="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-          <div class="rounded-3xl bg-slate-950 px-5 py-5 text-white shadow-xl shadow-slate-300/60">
+          <div class="rounded-3xl border border-slate-800/80 bg-slate-950 px-5 py-5 text-white">
             <p class="text-xs uppercase tracking-[0.22em] text-slate-300">Policies loaded</p>
             <p class="mt-3 text-3xl font-semibold">{{ store.policies.length }}</p>
           </div>
-          <div class="rounded-3xl bg-white px-5 py-5 shadow-[inset_0_0_0_1px_rgba(148,163,184,0.18)]">
+          <div class="rounded-3xl border border-slate-200 bg-white px-5 py-5">
             <p class="text-xs uppercase tracking-[0.22em] text-slate-400">Visible now</p>
             <p class="mt-3 text-3xl font-semibold text-slate-900">{{ policies.length }}</p>
           </div>
-          <div class="rounded-3xl bg-gradient-to-br from-amber-100 via-orange-50 to-white px-5 py-5 shadow-[inset_0_0_0_1px_rgba(251,191,36,0.2)]">
+          <div class="rounded-3xl border border-amber-200/70 bg-gradient-to-br from-amber-100 via-orange-50 to-white px-5 py-5">
             <p class="text-xs uppercase tracking-[0.22em] text-amber-700">Next renewal</p>
             <p class="mt-3 text-lg font-semibold text-slate-900">{{ nextRenewalLabel }}</p>
           </div>

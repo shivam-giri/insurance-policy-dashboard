@@ -1,5 +1,5 @@
 <template>
-  <article class="surface-card group relative overflow-hidden p-5 transition duration-300 hover:-translate-y-1">
+  <article class="surface-card group relative overflow-hidden p-5 transition duration-300 hover:border-slate-300 hover:bg-white">
     <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-sky-400 via-cyan-300 to-amber-300"></div>
     <div class="flex items-start justify-between gap-4">
       <div>

@@ -1,6 +1,6 @@
 <template>
   <footer class="px-4 pb-6 pt-2 sm:px-6 lg:px-8">
-    <div class="mx-auto flex w-full max-w-7xl flex-col gap-3 rounded-[28px] border border-white/70 bg-white/75 px-5 py-4 text-xs text-slate-500 shadow-[0_18px_50px_-30px_rgba(15,23,42,0.4)] backdrop-blur sm:flex-row sm:items-center sm:justify-between">
+    <div class="mx-auto flex w-full max-w-7xl flex-col gap-3 rounded-[28px] border border-slate-200/80 bg-white/80 px-5 py-4 text-xs text-slate-500 shadow-[0_10px_26px_-24px_rgba(15,23,42,0.18)] backdrop-blur sm:flex-row sm:items-center sm:justify-between">
       <div>
         <span class="font-semibold text-slate-700">Insurance Policy Dashboard</span>
         <span class="mx-2 text-slate-300">|</span>
