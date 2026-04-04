@@ -12,27 +12,37 @@
           </div>
         </div>
 
-        <button
-          class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 transition hover:bg-slate-50 md:hidden"
-          type="button"
-          :aria-expanded="menuOpen ? 'true' : 'false'"
-          aria-label="Toggle navigation menu"
-          @click="menuOpen = !menuOpen"
-        >
-          <span class="flex w-5 flex-col gap-1.5">
-            <span :class="['h-0.5 rounded-full bg-current transition', menuOpen ? 'translate-y-2 rotate-45' : '']"></span>
-            <span :class="['h-0.5 rounded-full bg-current transition', menuOpen ? 'opacity-0' : '']"></span>
-            <span :class="['h-0.5 rounded-full bg-current transition', menuOpen ? '-translate-y-2 -rotate-45' : '']"></span>
-          </span>
-        </button>
+        <div class="flex items-center gap-2">
+          <button
+            class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 transition hover:bg-slate-50 md:hidden"
+            type="button"
+            :aria-expanded="menuOpen ? 'true' : 'false'"
+            aria-label="Toggle navigation menu"
+            @click="menuOpen = !menuOpen"
+          >
+            <span class="flex w-5 flex-col gap-1.5">
+              <span :class="['h-0.5 rounded-full bg-current transition', menuOpen ? 'translate-y-2 rotate-45' : '']"></span>
+              <span :class="['h-0.5 rounded-full bg-current transition', menuOpen ? 'opacity-0' : '']"></span>
+              <span :class="['h-0.5 rounded-full bg-current transition', menuOpen ? '-translate-y-2 -rotate-45' : '']"></span>
+            </span>
+          </button>
 
-        <ul class="hidden items-center gap-2 text-sm font-medium text-slate-600 md:flex">
-          <li v-for="item in navItems" :key="item.to">
-            <RouterLink :to="item.to" class="rounded-full border border-transparent px-4 py-2 transition hover:bg-slate-100 hover:text-slate-900" active-class="border border-slate-200 bg-slate-900 text-white">
-              {{ item.label }}
-            </RouterLink>
-          </li>
-        </ul>
+          <ul class="hidden items-center gap-2 text-sm font-medium text-slate-600 md:flex">
+            <li v-for="item in navItems" :key="item.to">
+              <RouterLink :to="item.to" class="nav-link" active-class="nav-link-active">
+                {{ item.label }}
+              </RouterLink>
+            </li>
+            <li>
+              <label class="sr-only" for="theme-select">Theme</label>
+              <select id="theme-select" v-model="theme" class="theme-select">
+                <option v-for="option in themeOptions" :key="option.value" :value="option.value">
+                  {{ option.label }}
+                </option>
+              </select>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div v-if="menuOpen" class="mt-4 border-t border-slate-200/80 pt-4 md:hidden">
@@ -40,14 +50,22 @@
           <li v-for="item in navItems" :key="`${item.to}-mobile`">
             <RouterLink
               :to="item.to"
-              class="block rounded-2xl border border-transparent px-4 py-3 transition hover:bg-slate-100"
-              active-class="border border-slate-200 bg-slate-900 text-white"
+              class="nav-link-mobile"
+              active-class="nav-link-active"
               @click="menuOpen = false"
             >
               {{ item.label }}
             </RouterLink>
           </li>
         </ul>
+        <div class="mt-3">
+          <label class="field-label" for="theme-select-mobile">Theme</label>
+          <select id="theme-select-mobile" v-model="theme" class="theme-select mt-2 w-full">
+            <option v-for="option in themeOptions" :key="`${option.value}-mobile`" :value="option.value">
+              {{ option.label }}
+            </option>
+          </select>
+        </div>
       </div>
     </nav>
   </header>
@@ -56,9 +74,11 @@
 <script setup>
 import { ref, watch } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
+import { themeOptions, useTheme } from '../composables/useTheme'
 
 const route = useRoute()
 const menuOpen = ref(false)
+const { theme } = useTheme()
 const navItems = [
   { label: 'Home', to: '/' },
   { label: 'Compare', to: '/compare' },
